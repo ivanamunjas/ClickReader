@@ -4,7 +4,7 @@
 #include <QDebug>
 
 
-PortComboBox::PortComboBox(QComboBox* parent) :  QComboBox(parent) {
+PortComboBox::PortComboBox(QWidget *parent) :  QComboBox(parent) {
 
 }
 

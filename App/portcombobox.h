@@ -8,7 +8,7 @@ class PortComboBox : public QComboBox {
     Q_OBJECT
 public:
     virtual void showPopup();
-    explicit PortComboBox(QComboBox *parent = 0);
+    explicit PortComboBox(QWidget *parent = 0);
     ~PortComboBox();
 };
 
