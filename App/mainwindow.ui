@@ -224,26 +224,21 @@
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout_2">
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_4">
-               <property name="spacing">
-                <number>0</number>
+              <widget class="PortComboBox" name="combo" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>26</height>
+                </size>
                </property>
-               <item>
-                <widget class="PortComboBox" name="combo" native="true">
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>26</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Open Sans</family>
-                   <pointsize>12</pointsize>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QComboBox {
+               <property name="font">
+                <font>
+                 <family>Open Sans</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QComboBox {
     border: 2px solid #00bfff;
     border-radius: 6px;
     padding: 1px 18px 1px 3px;
@@ -251,6 +246,16 @@
 
 	color: #33ccff;
 }
+
+QPushButton:hover {
+    border: 2px solid  #00bfff;
+    border-radius: 6px;
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #006080, stop: 1 #000000);
+    min-width: 130px;
+	color: #33ccff;
+}
+
 
 QComboBox:editable {
     background: #00bfff;
@@ -300,15 +305,58 @@ QWidget:item:selected
      border: 0px solid #999900;
      background: transparent;
 }</string>
-                 </property>
-                </widget>
-               </item>
-              </layout>
+               </property>
+               <zorder>refreshButton</zorder>
+              </widget>
              </item>
              <item>
-              <widget class="QLabel" name="label_3">
+              <widget class="QPushButton" name="refreshButton">
+               <property name="minimumSize">
+                <size>
+                 <width>44</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>40</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #00bfff;
+    border-radius: 6px;
+    background-color:
+                                      #000000;
+    min-width: 40px;
+	color:#00bfff;
+}
+
+
+QPushButton:hover {
+    border: 2px solid  #00bfff;
+    border-radius: 6px;
+    background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #006080, stop: 1 #000000);
+    min-width: 40px;
+	color: #33ccff;
+}
+
+</string>
+               </property>
                <property name="text">
-                <string>TextLabel</string>
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>../../../../Downloads/if_5_-_Refresh_1815572 (1).png</normaloff>../../../../Downloads/if_5_-_Refresh_1815572 (1).png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
                </property>
               </widget>
              </item>
@@ -741,7 +789,7 @@ QScrollBar::sub-line:vertical {
                 <x>0</x>
                 <y>0</y>
                 <width>419</width>
-                <height>475</height>
+                <height>473</height>
                </rect>
               </property>
              </widget>

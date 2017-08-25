@@ -123,29 +123,34 @@ void MainWindow::on_combo_currentIndexChanged(int index) {
         qDebug() << "Can't open serial port.";
         qDebug() << serial->errorString();
         serial->close();
-        pix.load("C:/Users/mikroe/Downloads/disconnect1.png");
-              ui->label_3->setPixmap(pix);
+        //pix.load("C:/Users/mikroe/Downloads/disconnect1.png");
+             // ui->label_3->setPixmap(pix);
     }
     else {
      //   QObject::connect(serial, &QSerialPort::readyRead, this, &MainWindow::readData);
-        pix.load("C:/Users/mikroe/Downloads/usb1.png");
-        ui->label_3->setPixmap(pix);
+       // pix.load("C:/Users/mikroe/Downloads/usb1.png");
+       // ui->label_3->setPixmap(pix);
     }
 }
 
 
 
+void MainWindow::on_refreshButton_clicked() {
+    if (serial->isOpen())
+        serial->close();
 
+    serial->setPortName((ui->combo)->currentText());
 
-
-
-
-
-
-
-
-
-
-
-
-
+    if (!serial->open(QIODevice::ReadOnly))  {
+        qDebug() << "Can't open serial port.";
+        qDebug() << serial->errorString();
+        serial->close();
+       // pix.load("C:/Users/mikroe/Downloads/disconnect1.png");
+            //  ui->label_3->setPixmap(pix);
+    }
+    else {
+     //   QObject::connect(serial, &QSerialPort::readyRead, this, &MainWindow::readData);
+        //pix.load("C:/Users/mikroe/Downloads/usb1.png");
+      //  ui->label_3->setPixmap(pix);
+    }
+}
