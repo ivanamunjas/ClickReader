@@ -39,7 +39,7 @@ private:
     bool pause = false;
     QStringList ports;
     QPixmap pix;
-    PortComboBox* combo;
+   // PortComboBox* combo;
 };
 
 #endif // MAINWINDOW_H

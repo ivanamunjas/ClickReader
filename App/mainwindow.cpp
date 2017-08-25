@@ -44,9 +44,10 @@ MainWindow::MainWindow(QWidget *parent) :
     serial->setStopBits(QSerialPort::OneStop);
     serial->setDataBits(QSerialPort::Data8);
 
-    combo = new PortComboBox();
-    ui->horizontalLayout_4->addWidget(combo);
-    QObject::connect(combo,  static_cast<void (PortComboBox::*)(int)>(&PortComboBox::currentIndexChanged), this, &MainWindow::on_combo_currentIndexChanged);
+   // combo = new PortComboBox();
+  //  ui->horizontalLayout_4->addWidget(combo);
+
+    QObject::connect(ui->combo,  static_cast<void (PortComboBox::*)(int)>(&PortComboBox::currentIndexChanged), this, &MainWindow::on_combo_currentIndexChanged);
    // static_cast<void (QComboBox::*)(const QString &)>(&QComboBox::activated)
     // static_cast<void (QTcpSocket::*) (QAbstractSocket::SocketError)>(&QTcpSocket::error)
 
@@ -116,7 +117,7 @@ void MainWindow::on_combo_currentIndexChanged(int index) {
     if (serial->isOpen())
         serial->close();
 
-    serial->setPortName((combo)->currentText());
+    serial->setPortName((ui->combo)->currentText());
 
     if (!serial->open(QIODevice::ReadOnly))  {
         qDebug() << "Can't open serial port.";
