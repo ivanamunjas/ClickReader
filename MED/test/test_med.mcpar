@@ -6,7 +6,7 @@ Value=0
 [BUILD_TYPE]
 Value=0
 [ACTIVE_TAB]
-Value=..\lib\MED_library.h
+Value=..\lib\MED_library.c
 [USE_EEPROM]
 Value=0
 [USE_HEAP]
@@ -25,10 +25,9 @@ Count=0
 Count=0
 ActiveImageIndex=-1
 [OPENED_FILES]
-Count=3
-File0=test_med.c
-File1=..\lib\MED_library.c
-File2=..\lib\MED_library.h
+Count=2
+File0=..\lib\MED_library.c
+File1=..\lib\MED_library.h
 [EEPROM]
 Count=0
 [ACTIVE_COMMENTS_FILES]
@@ -36,12 +35,11 @@ Count=0
 [OTHER_FILES]
 Count=0
 [SEARCH_PATH]
-Count=5
+Count=4
 Path0=C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for ARM\Defs\
-Path1=C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for ARM\Uses\ST M3\
-Path2=C:\Users\mikroe\Desktop\Ivane\ClickReader\MED\test\
+Path1=C:\Users\mikroe\Desktop\Ivane\ClickReader\MED\test\
+Path2=C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for ARM\Uses\ST M3\
 Path3=C:\Users\mikroe\Desktop\Ivane\ClickReader\MED\lib\
-Path4=C:\Users\mikroe\Desktop\Ivane\ClickReader\MED\lib\
 [HEADER_PATH]
 Count=1
 Path0=C:\Users\mikroe\Desktop\Ivane\ClickReader\MED\lib\

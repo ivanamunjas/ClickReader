@@ -1,0 +1,12 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\functions.o
+./debug\fieldwidget.o
+./debug\fieldwidgetContainer.o
+./debug\portcombobox.o
+./debug\moc_mainwindow.o
+./debug\moc_fieldwidget.o
+./debug\moc_fieldwidgetContainer.o
+./debug\moc_portcombobox.o
+);

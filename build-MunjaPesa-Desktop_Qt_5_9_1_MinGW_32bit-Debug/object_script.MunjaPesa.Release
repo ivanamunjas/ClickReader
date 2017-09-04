@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\functions.o
+./release\fieldwidget.o
+./release\fieldwidgetContainer.o
+./release\portcombobox.o
+./release\moc_mainwindow.o
+./release\moc_fieldwidget.o
+./release\moc_fieldwidgetContainer.o
+./release\moc_portcombobox.o
+);
