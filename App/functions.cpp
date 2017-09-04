@@ -126,15 +126,15 @@ void Func::log(QByteArray arr, QString title){
 
     QXmlStreamReader xmlReader;
     QDateTime q;
-    txt->setTextColor(QColor(0,0,0));
+    txt->setTextColor(QColor(242, 242, 242));
     txt->append("(" + q.currentDateTime().toString("dd-MM-yyyy hh:mm:ss") + ")");
 
     if (title == "Message")
-        txt->setTextColor(QColor(0,191,255));
+        txt->setTextColor(QColor(128, 193, 255));
     else if (title == "Warning")
-        txt->setTextColor(QColor(0,200,0));
+        txt->setTextColor(QColor(255, 255, 102));
     else
-        txt->setTextColor(QColor(200,0,0));
+        txt->setTextColor(QColor(255, 77, 77));
 
     txt->append(title + ": ");
 
@@ -147,7 +147,7 @@ void Func::log(QByteArray arr, QString title){
         if(xmlReader.isStartElement()) {
             if (xmlReader.name() == "txt") {
                 txt->moveCursor(QTextCursor::MoveOperation::End,QTextCursor::MoveMode::MoveAnchor);
-                txt->setTextColor(QColor(0,0,0));
+                txt->setTextColor(QColor(242, 242, 242));
                 txt->insertPlainText(xmlReader.readElementText() + "\n");
             }
         }

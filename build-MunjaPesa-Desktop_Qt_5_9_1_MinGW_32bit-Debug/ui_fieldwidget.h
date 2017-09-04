@@ -24,96 +24,147 @@ class Ui_FieldWidget
 {
 public:
     QHBoxLayout *horizontalLayout;
+    QHBoxLayout *horizontalLayout_3;
+    QWidget *widget_2;
     QLabel *nameLabel;
-    QWidget *widget;
-    QHBoxLayout *horizontalLayout_2;
     QLabel *valueLabel;
     QLabel *unitLabel;
+    QWidget *widget;
 
     void setupUi(QWidget *FieldWidget)
     {
         if (FieldWidget->objectName().isEmpty())
             FieldWidget->setObjectName(QStringLiteral("FieldWidget"));
-        FieldWidget->resize(473, 118);
-        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        FieldWidget->resize(473, 175);
+        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(FieldWidget->sizePolicy().hasHeightForWidth());
         FieldWidget->setSizePolicy(sizePolicy);
-        FieldWidget->setMinimumSize(QSize(240, 90));
+        FieldWidget->setMinimumSize(QSize(240, 175));
         FieldWidget->setMaximumSize(QSize(16777215, 16777215));
         FieldWidget->setStyleSheet(QLatin1String("QWidget {\n"
 "	background-color: black;\n"
-"	border: 2px solid #00bfff;\n"
-"	border-radius: 5px;\n"
+"	border: 0px;\n"
+"	\n"
 "}"));
         horizontalLayout = new QHBoxLayout(FieldWidget);
-        horizontalLayout->setSpacing(5);
+        horizontalLayout->setSpacing(0);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         horizontalLayout->setSizeConstraint(QLayout::SetNoConstraint);
-        horizontalLayout->setContentsMargins(5, 5, 5, 5);
-        nameLabel = new QLabel(FieldWidget);
+        horizontalLayout->setContentsMargins(0, 2, 0, 2);
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setSpacing(5);
+        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        widget_2 = new QWidget(FieldWidget);
+        widget_2->setObjectName(QStringLiteral("widget_2"));
+        widget_2->setMinimumSize(QSize(165, 0));
+        widget_2->setMaximumSize(QSize(16777215, 16777215));
+        widget_2->setStyleSheet(QLatin1String("QWidget {\n"
+"background-color: #404040;\n"
+"}"));
+        nameLabel = new QLabel(widget_2);
         nameLabel->setObjectName(QStringLiteral("nameLabel"));
-        nameLabel->setMinimumSize(QSize(80, 80));
-        nameLabel->setMaximumSize(QSize(200, 16777215));
+        nameLabel->setGeometry(QRect(20, 10, 150, 21));
+        QPalette palette;
+        QBrush brush(QColor(230, 230, 230, 255));
+        brush.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        QBrush brush1(QColor(64, 64, 64, 255));
+        brush1.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Button, brush1);
+        QBrush brush2(QColor(255, 255, 255, 255));
+        brush2.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Text, brush2);
+        palette.setBrush(QPalette::Active, QPalette::ButtonText, brush2);
+        palette.setBrush(QPalette::Active, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Text, brush2);
+        palette.setBrush(QPalette::Inactive, QPalette::ButtonText, brush2);
+        palette.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        QBrush brush3(QColor(120, 120, 120, 255));
+        brush3.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
+        palette.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Text, brush3);
+        palette.setBrush(QPalette::Disabled, QPalette::ButtonText, brush3);
+        palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        nameLabel->setPalette(palette);
         QFont font;
         font.setFamily(QStringLiteral("Open Sans"));
-        font.setPointSize(12);
+        font.setPointSize(14);
         font.setBold(false);
         font.setWeight(50);
         nameLabel->setFont(font);
-        nameLabel->setStyleSheet(QLatin1String("QLabel {\n"
-"	color: #ffffff;\n"
-"	border: 2px solid #00bfff;\n"
-"	border-radius: 4px;\n"
-"}"));
-        nameLabel->setTextFormat(Qt::RichText);
-        nameLabel->setAlignment(Qt::AlignCenter);
+        valueLabel = new QLabel(widget_2);
+        valueLabel->setObjectName(QStringLiteral("valueLabel"));
+        valueLabel->setGeometry(QRect(20, 53, 661, 61));
+        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Preferred);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(valueLabel->sizePolicy().hasHeightForWidth());
+        valueLabel->setSizePolicy(sizePolicy1);
+        QPalette palette1;
+        palette1.setBrush(QPalette::Active, QPalette::WindowText, brush2);
+        palette1.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette1.setBrush(QPalette::Active, QPalette::Base, brush1);
+        palette1.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette1.setBrush(QPalette::Inactive, QPalette::WindowText, brush2);
+        palette1.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette1.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette1.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette1.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
+        palette1.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette1.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette1.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        valueLabel->setPalette(palette1);
+        QFont font1;
+        font1.setFamily(QStringLiteral("Open Sans"));
+        font1.setPointSize(48);
+        font1.setBold(false);
+        font1.setWeight(50);
+        valueLabel->setFont(font1);
+        unitLabel = new QLabel(widget_2);
+        unitLabel->setObjectName(QStringLiteral("unitLabel"));
+        unitLabel->setGeometry(QRect(20, 138, 150, 21));
+        QPalette palette2;
+        QBrush brush4(QColor(128, 193, 255, 255));
+        brush4.setStyle(Qt::SolidPattern);
+        palette2.setBrush(QPalette::Active, QPalette::WindowText, brush4);
+        palette2.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette2.setBrush(QPalette::Active, QPalette::Base, brush1);
+        palette2.setBrush(QPalette::Active, QPalette::Window, brush1);
+        palette2.setBrush(QPalette::Inactive, QPalette::WindowText, brush4);
+        palette2.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette2.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette2.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette2.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
+        palette2.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette2.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette2.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        unitLabel->setPalette(palette2);
+        QFont font2;
+        font2.setFamily(QStringLiteral("Open Sans"));
+        font2.setPointSize(14);
+        unitLabel->setFont(font2);
 
-        horizontalLayout->addWidget(nameLabel);
+        horizontalLayout_3->addWidget(widget_2);
 
         widget = new QWidget(FieldWidget);
         widget->setObjectName(QStringLiteral("widget"));
-        widget->setMinimumSize(QSize(160, 80));
-        widget->setMaximumSize(QSize(350, 16777215));
-        widget->setStyleSheet(QLatin1String("border: 2px solid #00bfff;\n"
-"	border-radius: 4px;"));
-        horizontalLayout_2 = new QHBoxLayout(widget);
-        horizontalLayout_2->setSpacing(3);
-        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        horizontalLayout_2->setSizeConstraint(QLayout::SetMinimumSize);
-        horizontalLayout_2->setContentsMargins(3, 3, 3, 3);
-        valueLabel = new QLabel(widget);
-        valueLabel->setObjectName(QStringLiteral("valueLabel"));
-        valueLabel->setMinimumSize(QSize(60, 0));
-        valueLabel->setMaximumSize(QSize(16777215, 150));
-        QFont font1;
-        font1.setFamily(QStringLiteral("Open Sans"));
-        font1.setPointSize(12);
-        valueLabel->setFont(font1);
-        valueLabel->setStyleSheet(QLatin1String("QLabel {\n"
-"	color: #ffffff;\n"
-"border: 0px;\n"
+        widget->setMinimumSize(QSize(350, 0));
+        widget->setStyleSheet(QLatin1String("QWidget {\n"
+"background-color: #404040;\n"
 "}"));
-        valueLabel->setAlignment(Qt::AlignCenter);
 
-        horizontalLayout_2->addWidget(valueLabel);
-
-        unitLabel = new QLabel(widget);
-        unitLabel->setObjectName(QStringLiteral("unitLabel"));
-        unitLabel->setMinimumSize(QSize(60, 0));
-        unitLabel->setFont(font1);
-        unitLabel->setStyleSheet(QLatin1String("QLabel {\n"
-"	color: #ffffff;\n"
-"	border: 0px;\n"
-"\n"
-"}"));
-        unitLabel->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        horizontalLayout_2->addWidget(unitLabel);
+        horizontalLayout_3->addWidget(widget);
 
 
-        horizontalLayout->addWidget(widget);
+        horizontalLayout->addLayout(horizontalLayout_3);
 
 
         retranslateUi(FieldWidget);
@@ -124,9 +175,9 @@ public:
     void retranslateUi(QWidget *FieldWidget)
     {
         FieldWidget->setWindowTitle(QApplication::translate("FieldWidget", "Form", Q_NULLPTR));
-        nameLabel->setText(QApplication::translate("FieldWidget", "TextLabel", Q_NULLPTR));
+        nameLabel->setText(QString());
         valueLabel->setText(QApplication::translate("FieldWidget", "0", Q_NULLPTR));
-        unitLabel->setText(QApplication::translate("FieldWidget", "TextLabel", Q_NULLPTR));
+        unitLabel->setText(QString());
     } // retranslateUi
 
 };

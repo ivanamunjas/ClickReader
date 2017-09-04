@@ -34,22 +34,12 @@ MainWindow::MainWindow(QWidget *parent) :
     serial = new QSerialPort(this);
     QObject::connect(serial, &QSerialPort::readyRead, this, &MainWindow::readData);
 
-//    Q_FOREACH(QSerialPortInfo port, QSerialPortInfo::availablePorts()) {
-
-//            (ui->comboBox)->addItem(port.portName());
-//            ports.push_back(port.portName());
-//     }
     serial->setBaudRate(56000);
     serial->setParity(QSerialPort::NoParity);
     serial->setStopBits(QSerialPort::OneStop);
     serial->setDataBits(QSerialPort::Data8);
 
-   // combo = new PortComboBox();
-  //  ui->horizontalLayout_4->addWidget(combo);
-
     QObject::connect(ui->combo,  static_cast<void (PortComboBox::*)(int)>(&PortComboBox::currentIndexChanged), this, &MainWindow::on_combo_currentIndexChanged);
-   // static_cast<void (QComboBox::*)(const QString &)>(&QComboBox::activated)
-    // static_cast<void (QTcpSocket::*) (QAbstractSocket::SocketError)>(&QTcpSocket::error)
 
     FieldWidgetContainer *container = new FieldWidgetContainer;
 
@@ -57,19 +47,11 @@ MainWindow::MainWindow(QWidget *parent) :
 
     func.setContainer(&container);
     func.setTextEdit(&(ui->textEdit));
-    func.setTitle(&(ui->label)); //ovo
+    func.setTitle(&(ui->label));
 }
 
 
 void MainWindow::readData() {
-
-//    if (serial->error() != QSerialPort::NoError) {
-//        qDebug() << serial->error();
-//        pix.load("C:/Users/mikroe/Downloads/disconnect1.png");
-//        ui->label_3->setPixmap(pix);
-//        serial->close();
-//    }
-
 
     if(!pause && serial->isOpen()){
 
@@ -123,14 +105,8 @@ void MainWindow::on_combo_currentIndexChanged(int index) {
         qDebug() << "Can't open serial port.";
         qDebug() << serial->errorString();
         serial->close();
-        //pix.load("C:/Users/mikroe/Downloads/disconnect1.png");
-             // ui->label_3->setPixmap(pix);
     }
-    else {
-     //   QObject::connect(serial, &QSerialPort::readyRead, this, &MainWindow::readData);
-       // pix.load("C:/Users/mikroe/Downloads/usb1.png");
-       // ui->label_3->setPixmap(pix);
-    }
+
 }
 
 
@@ -145,12 +121,6 @@ void MainWindow::on_refreshButton_clicked() {
         qDebug() << "Can't open serial port.";
         qDebug() << serial->errorString();
         serial->close();
-       // pix.load("C:/Users/mikroe/Downloads/disconnect1.png");
-            //  ui->label_3->setPixmap(pix);
     }
-    else {
-     //   QObject::connect(serial, &QSerialPort::readyRead, this, &MainWindow::readData);
-        //pix.load("C:/Users/mikroe/Downloads/usb1.png");
-      //  ui->label_3->setPixmap(pix);
-    }
+
 }
