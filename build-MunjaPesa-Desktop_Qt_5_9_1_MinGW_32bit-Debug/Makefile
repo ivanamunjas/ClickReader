@@ -210,6 +210,7 @@ Makefile: ../App/MunjaPesa.pro C:/Qt5.9/5.9.1/mingw53_32/mkspecs/win32-g++/qmake
 		C:/Qt5.9/5.9.1/mingw53_32/mkspecs/features/qt_config.prf \
 		C:/Qt5.9/5.9.1/mingw53_32/mkspecs/win32-g++/qmake.conf \
 		C:/Qt5.9/5.9.1/mingw53_32/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		C:/Qt5.9/5.9.1/mingw53_32/mkspecs/features/exclusive_builds.prf \
 		C:/Qt5.9/5.9.1/mingw53_32/mkspecs/features/toolchain.prf \
 		C:/Qt5.9/5.9.1/mingw53_32/mkspecs/features/default_pre.prf \
@@ -234,6 +235,7 @@ Makefile: ../App/MunjaPesa.pro C:/Qt5.9/5.9.1/mingw53_32/mkspecs/win32-g++/qmake
 		C:/Qt5.9/5.9.1/mingw53_32/mkspecs/features/lex.prf \
 		../App/MunjaPesa.pro \
 		C:/Qt5.9/5.9.1/mingw53_32/lib/qtmaind.prl \
+		C:/Qt5.9/5.9.1/mingw53_32/lib/Qt5PrintSupport.prl \
 		C:/Qt5.9/5.9.1/mingw53_32/lib/Qt5Widgets.prl \
 		C:/Qt5.9/5.9.1/mingw53_32/lib/Qt5Gui.prl \
 		C:/Qt5.9/5.9.1/mingw53_32/lib/Qt5SerialPort.prl \
@@ -388,6 +390,7 @@ C:/Qt5.9/5.9.1/mingw53_32/mkspecs/features/qt_functions.prf:
 C:/Qt5.9/5.9.1/mingw53_32/mkspecs/features/qt_config.prf:
 C:/Qt5.9/5.9.1/mingw53_32/mkspecs/win32-g++/qmake.conf:
 C:/Qt5.9/5.9.1/mingw53_32/mkspecs/features/spec_post.prf:
+.qmake.stash:
 C:/Qt5.9/5.9.1/mingw53_32/mkspecs/features/exclusive_builds.prf:
 C:/Qt5.9/5.9.1/mingw53_32/mkspecs/features/toolchain.prf:
 C:/Qt5.9/5.9.1/mingw53_32/mkspecs/features/default_pre.prf:
@@ -412,6 +415,7 @@ C:/Qt5.9/5.9.1/mingw53_32/mkspecs/features/yacc.prf:
 C:/Qt5.9/5.9.1/mingw53_32/mkspecs/features/lex.prf:
 ../App/MunjaPesa.pro:
 C:/Qt5.9/5.9.1/mingw53_32/lib/qtmaind.prl:
+C:/Qt5.9/5.9.1/mingw53_32/lib/Qt5PrintSupport.prl:
 C:/Qt5.9/5.9.1/mingw53_32/lib/Qt5Widgets.prl:
 C:/Qt5.9/5.9.1/mingw53_32/lib/Qt5Gui.prl:
 C:/Qt5.9/5.9.1/mingw53_32/lib/Qt5SerialPort.prl:

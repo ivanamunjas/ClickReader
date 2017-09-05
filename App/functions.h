@@ -18,6 +18,7 @@ private:
     FieldWidgetContainer* cont;
     QTextEdit* txt;
     QLabel* title; //ovo
+
 public:
     int msgEnd(QByteArray buff);
     void msgParse(QByteArray buff);

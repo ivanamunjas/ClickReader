@@ -61,7 +61,9 @@ void Func::update(QByteArray arr){
             }
             else if (xmlReader.name() == "value") {
                 if (fieldMap.contains(n)){
-                    (fieldMap.value(n))->setValue(xmlReader.readElementText());
+                    QString val = xmlReader.readElementText();
+                    (fieldMap.value(n))->setValue(val);
+                    (fieldMap.value(n))->updatePlot(val);
                 }
             }
         }

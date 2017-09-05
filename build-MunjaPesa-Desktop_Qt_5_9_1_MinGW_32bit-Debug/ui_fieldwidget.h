@@ -17,6 +17,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QWidget>
+#include <qcustomplot.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -29,7 +30,7 @@ public:
     QLabel *nameLabel;
     QLabel *valueLabel;
     QLabel *unitLabel;
-    QWidget *widget;
+    QCustomPlot *plotWidget;
 
     void setupUi(QWidget *FieldWidget)
     {
@@ -44,7 +45,7 @@ public:
         FieldWidget->setMinimumSize(QSize(240, 175));
         FieldWidget->setMaximumSize(QSize(16777215, 16777215));
         FieldWidget->setStyleSheet(QLatin1String("QWidget {\n"
-"	background-color: black;\n"
+"	background-color: #1a1a1a;\n"
 "	border: 0px;\n"
 "	\n"
 "}"));
@@ -61,7 +62,7 @@ public:
         widget_2->setMinimumSize(QSize(165, 0));
         widget_2->setMaximumSize(QSize(16777215, 16777215));
         widget_2->setStyleSheet(QLatin1String("QWidget {\n"
-"background-color: #404040;\n"
+"background-color: #333333;\n"
 "}"));
         nameLabel = new QLabel(widget_2);
         nameLabel->setObjectName(QStringLiteral("nameLabel"));
@@ -70,7 +71,7 @@ public:
         QBrush brush(QColor(230, 230, 230, 255));
         brush.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        QBrush brush1(QColor(64, 64, 64, 255));
+        QBrush brush1(QColor(51, 51, 51, 255));
         brush1.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::Button, brush1);
         QBrush brush2(QColor(255, 255, 255, 255));
@@ -151,17 +152,19 @@ public:
         font2.setFamily(QStringLiteral("Open Sans"));
         font2.setPointSize(14);
         unitLabel->setFont(font2);
+        nameLabel->raise();
+        valueLabel->raise();
+        unitLabel->raise();
 
         horizontalLayout_3->addWidget(widget_2);
 
-        widget = new QWidget(FieldWidget);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setMinimumSize(QSize(350, 0));
-        widget->setStyleSheet(QLatin1String("QWidget {\n"
-"background-color: #404040;\n"
+        plotWidget = new QCustomPlot(FieldWidget);
+        plotWidget->setObjectName(QStringLiteral("plotWidget"));
+        plotWidget->setStyleSheet(QLatin1String("QWidget {\n"
+"background-color: #333333;\n"
 "}"));
 
-        horizontalLayout_3->addWidget(widget);
+        horizontalLayout_3->addWidget(plotWidget);
 
 
         horizontalLayout->addLayout(horizontalLayout_3);

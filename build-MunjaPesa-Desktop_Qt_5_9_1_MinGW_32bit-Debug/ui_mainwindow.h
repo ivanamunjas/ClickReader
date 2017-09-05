@@ -61,7 +61,7 @@ public:
         QBrush brush(QColor(255, 255, 255, 255));
         brush.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::Base, brush);
-        QBrush brush1(QColor(0, 0, 0, 255));
+        QBrush brush1(QColor(26, 26, 26, 255));
         brush1.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::Window, brush1);
         palette.setBrush(QPalette::Inactive, QPalette::Base, brush);
@@ -79,11 +79,13 @@ public:
         centralWidget->setSizePolicy(sizePolicy);
         QPalette palette1;
         palette1.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette1.setBrush(QPalette::Active, QPalette::Window, brush1);
+        QBrush brush2(QColor(0, 0, 0, 255));
+        brush2.setStyle(Qt::SolidPattern);
+        palette1.setBrush(QPalette::Active, QPalette::Window, brush2);
         palette1.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette1.setBrush(QPalette::Inactive, QPalette::Window, brush1);
-        palette1.setBrush(QPalette::Disabled, QPalette::Base, brush1);
-        palette1.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette1.setBrush(QPalette::Inactive, QPalette::Window, brush2);
+        palette1.setBrush(QPalette::Disabled, QPalette::Base, brush2);
+        palette1.setBrush(QPalette::Disabled, QPalette::Window, brush2);
         centralWidget->setPalette(palette1);
         verticalLayout_2 = new QVBoxLayout(centralWidget);
         verticalLayout_2->setSpacing(6);
@@ -103,13 +105,13 @@ public:
         label->setObjectName(QStringLiteral("label"));
         label->setMaximumSize(QSize(901, 80));
         QPalette palette2;
-        QBrush brush2(QColor(128, 193, 255, 255));
-        brush2.setStyle(Qt::SolidPattern);
-        palette2.setBrush(QPalette::Active, QPalette::WindowText, brush2);
-        palette2.setBrush(QPalette::Inactive, QPalette::WindowText, brush2);
-        QBrush brush3(QColor(120, 120, 120, 255));
+        QBrush brush3(QColor(128, 193, 255, 255));
         brush3.setStyle(Qt::SolidPattern);
-        palette2.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
+        palette2.setBrush(QPalette::Active, QPalette::WindowText, brush3);
+        palette2.setBrush(QPalette::Inactive, QPalette::WindowText, brush3);
+        QBrush brush4(QColor(120, 120, 120, 255));
+        brush4.setStyle(Qt::SolidPattern);
+        palette2.setBrush(QPalette::Disabled, QPalette::WindowText, brush4);
         label->setPalette(palette2);
         QFont font;
         font.setFamily(QStringLiteral("Open Sans"));
@@ -220,8 +222,8 @@ public:
 "QComboBox\n"
 "{\n"
 "    color:#e6e6e6;\n"
-"    background-color: #404040;\n"
-"    border-color: #404040;\n"
+"    background-color: #333333;\n"
+"    border-color: #333333;\n"
 "    border-width: 1px;\n"
 "    border-style: solid;\n"
 "border-radius: 3px;\n"
@@ -230,7 +232,7 @@ public:
 "QComboBox QListView\n"
 "{\n"
 "    border: 1px ; \n"
-"    border-color: #404040;\n"
+"    border-color: #333333;\n"
 "    background-color: #8c8c8c;\n"
 "}\n"
 "\n"
@@ -238,7 +240,7 @@ public:
 "{\n"
 "    width: 20px;\n"
 "    border: 1px;\n"
-"    border-color:#404040;\n"
+"    border-color:#333333;\n"
 "    bor"
                         "der-left-style:solid;\n"
 "    border-top-style: none;\n"
@@ -255,19 +257,19 @@ public:
 "\n"
 "\n"
 "QComboBox QAbstractItemView{\n"
-"	background-color:  #595959;\n"
+"	background-color:  #404040;\n"
 "	color:#e6e6e6;\n"
 "    border: 1px;\n"
-"   border-color: #404040;\n"
-"	selection-background-color: #999999;\n"
+"   border-color: #333333;\n"
+"	selection-background-color: #595959;\n"
 "	selection-color: #e6e6e6;\n"
 "}\n"
 "\n"
 "QComboBox:hover\n"
 "{\n"
 "    color:#e6e6e6;\n"
-"    background-color: #595959;\n"
-"    border-color: #595959;\n"
+"    background-color: #404040;\n"
+"    border-color: #404040;\n"
 "    border-width: 1px;\n"
 "    border-style: solid;\n"
 "border-radius: 3px;\n"
@@ -287,10 +289,10 @@ public:
         refreshButton->setMinimumSize(QSize(40, 0));
         refreshButton->setMaximumSize(QSize(40, 25));
         refreshButton->setStyleSheet(QLatin1String("QPushButton {\n"
-"   border: 2px #404040;\n"
+"   border: 2px #333333;\n"
 "\n"
 "   border-radius: 3px;\n"
-"    background-color:  #404040;\n"
+"    background-color:  #333333;\n"
 "    min-width:40px;\n"
 "	color: #e6e6e6;\n"
 "\n"
@@ -300,7 +302,7 @@ public:
 "\n"
 "QPushButton:hover {\n"
 "   \n"
-"    background-color:#595959;\n"
+"    background-color:#404040;\n"
 "                                     \n"
 "    min-width: 80px;\n"
 "	color: #e6e6e6;\n"
@@ -318,28 +320,28 @@ public:
         pauseButton->setObjectName(QStringLiteral("pauseButton"));
         pauseButton->setMaximumSize(QSize(90, 25));
         QPalette palette3;
-        QBrush brush4(QColor(230, 230, 230, 255));
-        brush4.setStyle(Qt::SolidPattern);
-        palette3.setBrush(QPalette::Active, QPalette::WindowText, brush4);
-        QBrush brush5(QColor(64, 64, 64, 255));
+        QBrush brush5(QColor(230, 230, 230, 255));
         brush5.setStyle(Qt::SolidPattern);
-        palette3.setBrush(QPalette::Active, QPalette::Button, brush5);
-        palette3.setBrush(QPalette::Active, QPalette::Text, brush4);
-        palette3.setBrush(QPalette::Active, QPalette::ButtonText, brush4);
-        palette3.setBrush(QPalette::Active, QPalette::Base, brush5);
-        palette3.setBrush(QPalette::Active, QPalette::Window, brush5);
-        palette3.setBrush(QPalette::Inactive, QPalette::WindowText, brush4);
-        palette3.setBrush(QPalette::Inactive, QPalette::Button, brush5);
-        palette3.setBrush(QPalette::Inactive, QPalette::Text, brush4);
-        palette3.setBrush(QPalette::Inactive, QPalette::ButtonText, brush4);
-        palette3.setBrush(QPalette::Inactive, QPalette::Base, brush5);
-        palette3.setBrush(QPalette::Inactive, QPalette::Window, brush5);
-        palette3.setBrush(QPalette::Disabled, QPalette::WindowText, brush4);
-        palette3.setBrush(QPalette::Disabled, QPalette::Button, brush5);
-        palette3.setBrush(QPalette::Disabled, QPalette::Text, brush4);
-        palette3.setBrush(QPalette::Disabled, QPalette::ButtonText, brush4);
-        palette3.setBrush(QPalette::Disabled, QPalette::Base, brush5);
-        palette3.setBrush(QPalette::Disabled, QPalette::Window, brush5);
+        palette3.setBrush(QPalette::Active, QPalette::WindowText, brush5);
+        QBrush brush6(QColor(51, 51, 51, 255));
+        brush6.setStyle(Qt::SolidPattern);
+        palette3.setBrush(QPalette::Active, QPalette::Button, brush6);
+        palette3.setBrush(QPalette::Active, QPalette::Text, brush5);
+        palette3.setBrush(QPalette::Active, QPalette::ButtonText, brush5);
+        palette3.setBrush(QPalette::Active, QPalette::Base, brush6);
+        palette3.setBrush(QPalette::Active, QPalette::Window, brush6);
+        palette3.setBrush(QPalette::Inactive, QPalette::WindowText, brush5);
+        palette3.setBrush(QPalette::Inactive, QPalette::Button, brush6);
+        palette3.setBrush(QPalette::Inactive, QPalette::Text, brush5);
+        palette3.setBrush(QPalette::Inactive, QPalette::ButtonText, brush5);
+        palette3.setBrush(QPalette::Inactive, QPalette::Base, brush6);
+        palette3.setBrush(QPalette::Inactive, QPalette::Window, brush6);
+        palette3.setBrush(QPalette::Disabled, QPalette::WindowText, brush5);
+        palette3.setBrush(QPalette::Disabled, QPalette::Button, brush6);
+        palette3.setBrush(QPalette::Disabled, QPalette::Text, brush5);
+        palette3.setBrush(QPalette::Disabled, QPalette::ButtonText, brush5);
+        palette3.setBrush(QPalette::Disabled, QPalette::Base, brush6);
+        palette3.setBrush(QPalette::Disabled, QPalette::Window, brush6);
         pauseButton->setPalette(palette3);
         QFont font2;
         font2.setFamily(QStringLiteral("Open Sans"));
@@ -348,10 +350,10 @@ public:
         font2.setWeight(50);
         pauseButton->setFont(font2);
         pauseButton->setStyleSheet(QLatin1String("QPushButton {\n"
-"   border: 2px #404040;\n"
+"   border: 2px #333333;\n"
 "\n"
 "   border-radius: 3px;\n"
-"    background-color:  #404040;\n"
+"    background-color: #333333;\n"
 "    min-width: 80px;\n"
 "	color: #e6e6e6;\n"
 "\n"
@@ -360,7 +362,7 @@ public:
 "\n"
 "QPushButton:hover {\n"
 "   \n"
-"    background-color:#595959;\n"
+"    background-color:#404040;\n"
 "                                     \n"
 "    min-width: 80px;\n"
 "	color: #e6e6e6;\n"
@@ -383,18 +385,18 @@ public:
         scrollArea->setMinimumSize(QSize(300, 355));
         QPalette palette4;
         palette4.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        palette4.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette4.setBrush(QPalette::Active, QPalette::Button, brush2);
         palette4.setBrush(QPalette::Active, QPalette::Text, brush);
-        palette4.setBrush(QPalette::Active, QPalette::Base, brush1);
+        palette4.setBrush(QPalette::Active, QPalette::Base, brush2);
         palette4.setBrush(QPalette::Active, QPalette::Window, brush1);
         palette4.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
-        palette4.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette4.setBrush(QPalette::Inactive, QPalette::Button, brush2);
         palette4.setBrush(QPalette::Inactive, QPalette::Text, brush);
-        palette4.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette4.setBrush(QPalette::Inactive, QPalette::Base, brush2);
         palette4.setBrush(QPalette::Inactive, QPalette::Window, brush1);
-        palette4.setBrush(QPalette::Disabled, QPalette::WindowText, brush3);
-        palette4.setBrush(QPalette::Disabled, QPalette::Button, brush1);
-        palette4.setBrush(QPalette::Disabled, QPalette::Text, brush3);
+        palette4.setBrush(QPalette::Disabled, QPalette::WindowText, brush4);
+        palette4.setBrush(QPalette::Disabled, QPalette::Button, brush2);
+        palette4.setBrush(QPalette::Disabled, QPalette::Text, brush4);
         palette4.setBrush(QPalette::Disabled, QPalette::Base, brush1);
         palette4.setBrush(QPalette::Disabled, QPalette::Window, brush1);
         scrollArea->setPalette(palette4);
@@ -403,7 +405,7 @@ public:
         scrollArea->setFont(font3);
         scrollArea->setStyleSheet(QLatin1String("QScrollBar:vertical {          \n"
 "       border: 1px solid #999999;\n"
-"       background:#b3b3b3;\n"
+"       background:#8c8c8c;\n"
 "       width:10px;    \n"
 "       margin: 0px 0px 0px 0px;\n"
 "   }\n"
@@ -478,31 +480,31 @@ public:
         clearButton->setMinimumSize(QSize(80, 25));
         clearButton->setMaximumSize(QSize(16777215, 16777215));
         QPalette palette5;
-        palette5.setBrush(QPalette::Active, QPalette::WindowText, brush4);
-        palette5.setBrush(QPalette::Active, QPalette::Button, brush5);
-        palette5.setBrush(QPalette::Active, QPalette::Text, brush4);
-        palette5.setBrush(QPalette::Active, QPalette::ButtonText, brush4);
-        palette5.setBrush(QPalette::Active, QPalette::Base, brush5);
-        palette5.setBrush(QPalette::Active, QPalette::Window, brush5);
-        palette5.setBrush(QPalette::Inactive, QPalette::WindowText, brush4);
-        palette5.setBrush(QPalette::Inactive, QPalette::Button, brush5);
-        palette5.setBrush(QPalette::Inactive, QPalette::Text, brush4);
-        palette5.setBrush(QPalette::Inactive, QPalette::ButtonText, brush4);
-        palette5.setBrush(QPalette::Inactive, QPalette::Base, brush5);
-        palette5.setBrush(QPalette::Inactive, QPalette::Window, brush5);
-        palette5.setBrush(QPalette::Disabled, QPalette::WindowText, brush4);
-        palette5.setBrush(QPalette::Disabled, QPalette::Button, brush5);
-        palette5.setBrush(QPalette::Disabled, QPalette::Text, brush4);
-        palette5.setBrush(QPalette::Disabled, QPalette::ButtonText, brush4);
-        palette5.setBrush(QPalette::Disabled, QPalette::Base, brush5);
-        palette5.setBrush(QPalette::Disabled, QPalette::Window, brush5);
+        palette5.setBrush(QPalette::Active, QPalette::WindowText, brush5);
+        palette5.setBrush(QPalette::Active, QPalette::Button, brush6);
+        palette5.setBrush(QPalette::Active, QPalette::Text, brush5);
+        palette5.setBrush(QPalette::Active, QPalette::ButtonText, brush5);
+        palette5.setBrush(QPalette::Active, QPalette::Base, brush6);
+        palette5.setBrush(QPalette::Active, QPalette::Window, brush6);
+        palette5.setBrush(QPalette::Inactive, QPalette::WindowText, brush5);
+        palette5.setBrush(QPalette::Inactive, QPalette::Button, brush6);
+        palette5.setBrush(QPalette::Inactive, QPalette::Text, brush5);
+        palette5.setBrush(QPalette::Inactive, QPalette::ButtonText, brush5);
+        palette5.setBrush(QPalette::Inactive, QPalette::Base, brush6);
+        palette5.setBrush(QPalette::Inactive, QPalette::Window, brush6);
+        palette5.setBrush(QPalette::Disabled, QPalette::WindowText, brush5);
+        palette5.setBrush(QPalette::Disabled, QPalette::Button, brush6);
+        palette5.setBrush(QPalette::Disabled, QPalette::Text, brush5);
+        palette5.setBrush(QPalette::Disabled, QPalette::ButtonText, brush5);
+        palette5.setBrush(QPalette::Disabled, QPalette::Base, brush6);
+        palette5.setBrush(QPalette::Disabled, QPalette::Window, brush6);
         clearButton->setPalette(palette5);
         clearButton->setFont(font2);
         clearButton->setStyleSheet(QLatin1String("QPushButton {\n"
-"   border: 2px #404040;\n"
+"   border: 2px #333333;\n"
 "\n"
 "   border-radius: 3px;\n"
-"    background-color:  #404040;\n"
+"    background-color:  #333333;\n"
 "    min-width: 80px;\n"
 "	color: #e6e6e6;\n"
 "\n"
@@ -511,7 +513,7 @@ public:
 "\n"
 "QPushButton:hover {\n"
 "   \n"
-"    background-color:#595959;\n"
+"    background-color:#404040;\n"
 "                                     \n"
 "    min-width: 80px;\n"
 "	color: #e6e6e6;\n"
@@ -533,15 +535,15 @@ public:
         textEdit->setSizePolicy(sizePolicy4);
         textEdit->setMinimumSize(QSize(300, 0));
         QPalette palette6;
-        palette6.setBrush(QPalette::Active, QPalette::Button, brush5);
-        palette6.setBrush(QPalette::Active, QPalette::Base, brush5);
-        palette6.setBrush(QPalette::Active, QPalette::Window, brush5);
-        palette6.setBrush(QPalette::Inactive, QPalette::Button, brush5);
-        palette6.setBrush(QPalette::Inactive, QPalette::Base, brush5);
-        palette6.setBrush(QPalette::Inactive, QPalette::Window, brush5);
-        palette6.setBrush(QPalette::Disabled, QPalette::Button, brush5);
-        palette6.setBrush(QPalette::Disabled, QPalette::Base, brush5);
-        palette6.setBrush(QPalette::Disabled, QPalette::Window, brush5);
+        palette6.setBrush(QPalette::Active, QPalette::Button, brush6);
+        palette6.setBrush(QPalette::Active, QPalette::Base, brush6);
+        palette6.setBrush(QPalette::Active, QPalette::Window, brush6);
+        palette6.setBrush(QPalette::Inactive, QPalette::Button, brush6);
+        palette6.setBrush(QPalette::Inactive, QPalette::Base, brush6);
+        palette6.setBrush(QPalette::Inactive, QPalette::Window, brush6);
+        palette6.setBrush(QPalette::Disabled, QPalette::Button, brush6);
+        palette6.setBrush(QPalette::Disabled, QPalette::Base, brush6);
+        palette6.setBrush(QPalette::Disabled, QPalette::Window, brush6);
         textEdit->setPalette(palette6);
         QFont font4;
         font4.setFamily(QStringLiteral("Open Sans"));
@@ -551,7 +553,7 @@ public:
         textEdit->setFont(font4);
         textEdit->setStyleSheet(QLatin1String("QScrollBar:vertical {          \n"
 "       border: 1px solid #999999;\n"
-"       background:#b3b3b3;\n"
+"       background:#8c8c8c;\n"
 "       width:10px;    \n"
 "       margin: 0px 0px 0px 0px;\n"
 "   }\n"
@@ -575,7 +577,7 @@ public:
 "   }\n"
 "QTextEdit {\n"
 "\n"
-"background-color: #404040;\n"
+"background-color: #333333;\n"
 "border: 0px;\n"
 "\n"
 "}"));
@@ -599,7 +601,7 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "ClickReader", Q_NULLPTR));
         label->setText(QApplication::translate("MainWindow", "<html><head/><body><p>CLICK READER</p></body></html>", Q_NULLPTR));
-        label_2->setText(QApplication::translate("MainWindow", "TextLabel", Q_NULLPTR));
+        label_2->setText(QString());
         refreshButton->setText(QString());
         pauseButton->setText(QApplication::translate("MainWindow", "Pause", Q_NULLPTR));
         clearButton->setText(QApplication::translate("MainWindow", "Clear", Q_NULLPTR));

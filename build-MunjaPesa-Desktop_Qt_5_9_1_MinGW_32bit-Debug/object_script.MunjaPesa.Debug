@@ -5,8 +5,10 @@ INPUT(
 ./debug\fieldwidget.o
 ./debug\fieldwidgetContainer.o
 ./debug\portcombobox.o
+./debug\qcustomplot.o
 ./debug\moc_mainwindow.o
 ./debug\moc_fieldwidget.o
 ./debug\moc_fieldwidgetContainer.o
 ./debug\moc_portcombobox.o
+./debug\moc_qcustomplot.o
 );

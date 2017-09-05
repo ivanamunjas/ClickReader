@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui serialport
+QT       += core gui serialport printsupport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -29,7 +29,8 @@ SOURCES += \
     functions.cpp \
     fieldwidget.cpp \
     fieldwidgetContainer.cpp \
-    portcombobox.cpp
+    portcombobox.cpp \
+    qcustomplot.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -39,7 +40,8 @@ HEADERS += \
     functions.h \
     mainwindow.h \
     fieldwidgetContainer.h \
-    portcombobox.h
+    portcombobox.h \
+    qcustomplot.h
 
 FORMS += \
         mainwindow.ui \

@@ -34,7 +34,7 @@ public:
         FieldWidgetContainer->resize(411, 400);
         FieldWidgetContainer->setMinimumSize(QSize(411, 400));
         QPalette palette;
-        QBrush brush(QColor(0, 0, 0, 255));
+        QBrush brush(QColor(26, 26, 26, 255));
         brush.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::Button, brush);
         palette.setBrush(QPalette::Active, QPalette::Base, brush);
@@ -47,7 +47,7 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::Window, brush);
         FieldWidgetContainer->setPalette(palette);
         FieldWidgetContainer->setStyleSheet(QLatin1String("QWidget {\n"
-"	background-color: #000000;\n"
+"	background-color: #1a1a1a;\n"
 "border: 0px;\n"
 "}"));
         verticalLayout_2 = new QVBoxLayout(FieldWidgetContainer);
