@@ -6,7 +6,7 @@
 #include <QString>
 #include <QLabel>
 #include <QtGui>
-#include <QDateTime> // ovo
+#include <QDateTime>
 #include <QColor>
 
 
@@ -32,7 +32,7 @@ void Func::msgParse(QByteArray buff){
 
             if (attrib.value("type") == "init") {
                 reg(buff);
-                title->setText(attrib.value("title").toString()); //OVO
+                title->setText(attrib.value("title").toString());
             }
             else if (attrib.value("type") == "update") {
                 update(buff);
@@ -120,7 +120,7 @@ void Func::setTextEdit(QTextEdit** txt){
     this->txt = *txt;
 }
 
-void Func::setTitle(QLabel** title){ //ovo
+void Func::setTitle(QLabel** title){
     this->title = *title;
 }
 

@@ -28,6 +28,8 @@ private slots:
 
     void on_clearButton_clicked();
 
+    void on_logButton_clicked();
+
     void on_combo_currentIndexChanged(int index);
 
 
@@ -41,6 +43,7 @@ private:
     bool pause = false;
     QStringList ports;
     QPixmap pix;
+    int widgetHeight, textEditHeight;
    // PortComboBox* combo;
 };
 

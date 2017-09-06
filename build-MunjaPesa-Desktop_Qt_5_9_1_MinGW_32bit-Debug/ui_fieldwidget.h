@@ -16,6 +16,7 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 #include <qcustomplot.h>
 
@@ -27,6 +28,8 @@ public:
     QHBoxLayout *horizontalLayout;
     QHBoxLayout *horizontalLayout_3;
     QWidget *widget_2;
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *verticalLayout_2;
     QLabel *nameLabel;
     QLabel *valueLabel;
     QLabel *unitLabel;
@@ -59,14 +62,32 @@ public:
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
         widget_2 = new QWidget(FieldWidget);
         widget_2->setObjectName(QStringLiteral("widget_2"));
+        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Expanding);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(widget_2->sizePolicy().hasHeightForWidth());
+        widget_2->setSizePolicy(sizePolicy1);
         widget_2->setMinimumSize(QSize(165, 0));
         widget_2->setMaximumSize(QSize(16777215, 16777215));
         widget_2->setStyleSheet(QLatin1String("QWidget {\n"
 "background-color: #333333;\n"
 "}"));
-        nameLabel = new QLabel(widget_2);
+        widget_2->setInputMethodHints(Qt::ImhPreferNumbers);
+        verticalLayoutWidget = new QWidget(widget_2);
+        verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
+        verticalLayoutWidget->setGeometry(QRect(0, -8, 171, 201));
+        verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget);
+        verticalLayout_2->setSpacing(0);
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        verticalLayout_2->setContentsMargins(6, 0, 0, 10);
+        nameLabel = new QLabel(verticalLayoutWidget);
         nameLabel->setObjectName(QStringLiteral("nameLabel"));
-        nameLabel->setGeometry(QRect(20, 10, 150, 21));
+        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(nameLabel->sizePolicy().hasHeightForWidth());
+        nameLabel->setSizePolicy(sizePolicy2);
+        nameLabel->setMinimumSize(QSize(0, 46));
         QPalette palette;
         QBrush brush(QColor(230, 230, 230, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -101,14 +122,17 @@ public:
         font.setBold(false);
         font.setWeight(50);
         nameLabel->setFont(font);
-        valueLabel = new QLabel(widget_2);
+        nameLabel->setMargin(0);
+
+        verticalLayout_2->addWidget(nameLabel);
+
+        valueLabel = new QLabel(verticalLayoutWidget);
         valueLabel->setObjectName(QStringLiteral("valueLabel"));
-        valueLabel->setGeometry(QRect(20, 53, 661, 61));
-        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Preferred);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(valueLabel->sizePolicy().hasHeightForWidth());
-        valueLabel->setSizePolicy(sizePolicy1);
+        QSizePolicy sizePolicy3(QSizePolicy::Expanding, QSizePolicy::Preferred);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(valueLabel->sizePolicy().hasHeightForWidth());
+        valueLabel->setSizePolicy(sizePolicy3);
         QPalette palette1;
         palette1.setBrush(QPalette::Active, QPalette::WindowText, brush2);
         palette1.setBrush(QPalette::Active, QPalette::Button, brush1);
@@ -129,9 +153,15 @@ public:
         font1.setBold(false);
         font1.setWeight(50);
         valueLabel->setFont(font1);
-        unitLabel = new QLabel(widget_2);
+        valueLabel->setMargin(0);
+
+        verticalLayout_2->addWidget(valueLabel);
+
+        unitLabel = new QLabel(verticalLayoutWidget);
         unitLabel->setObjectName(QStringLiteral("unitLabel"));
-        unitLabel->setGeometry(QRect(20, 138, 150, 21));
+        sizePolicy2.setHeightForWidth(unitLabel->sizePolicy().hasHeightForWidth());
+        unitLabel->setSizePolicy(sizePolicy2);
+        unitLabel->setMinimumSize(QSize(0, 0));
         QPalette palette2;
         QBrush brush4(QColor(128, 193, 255, 255));
         brush4.setStyle(Qt::SolidPattern);
@@ -152,14 +182,17 @@ public:
         font2.setFamily(QStringLiteral("Open Sans"));
         font2.setPointSize(14);
         unitLabel->setFont(font2);
-        nameLabel->raise();
-        valueLabel->raise();
-        unitLabel->raise();
+        unitLabel->setMargin(0);
+
+        verticalLayout_2->addWidget(unitLabel);
+
+        verticalLayoutWidget->raise();
 
         horizontalLayout_3->addWidget(widget_2);
 
         plotWidget = new QCustomPlot(FieldWidget);
         plotWidget->setObjectName(QStringLiteral("plotWidget"));
+        plotWidget->setMinimumSize(QSize(350, 0));
         plotWidget->setStyleSheet(QLatin1String("QWidget {\n"
 "background-color: #333333;\n"
 "}"));
@@ -178,9 +211,9 @@ public:
     void retranslateUi(QWidget *FieldWidget)
     {
         FieldWidget->setWindowTitle(QApplication::translate("FieldWidget", "Form", Q_NULLPTR));
-        nameLabel->setText(QString());
+        nameLabel->setText(QApplication::translate("FieldWidget", "lalala", Q_NULLPTR));
         valueLabel->setText(QApplication::translate("FieldWidget", "0", Q_NULLPTR));
-        unitLabel->setText(QString());
+        unitLabel->setText(QApplication::translate("FieldWidget", "lalala", Q_NULLPTR));
     } // retranslateUi
 
 };

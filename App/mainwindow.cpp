@@ -48,6 +48,11 @@ MainWindow::MainWindow(QWidget *parent) :
     func.setContainer(&container);
     func.setTextEdit(&(ui->textEdit));
     func.setTitle(&(ui->label));
+
+    widgetHeight = ui->widget->maximumHeight();
+    textEditHeight = ui->textEdit->maximumHeight();
+    ui->logButton->setIcon(QIcon("C:/Users/mikroe/Desktop/Ivane/ClickReader/App/down-arrow (4).png"));
+    ui->refreshButton->setIcon(QIcon("C:/Users/mikroe/Desktop/Ivane/ClickReader/App/refresh (1).png"));
 }
 
 
@@ -122,5 +127,25 @@ void MainWindow::on_refreshButton_clicked() {
         qDebug() << serial->errorString();
         serial->close();
     }
+
+}
+
+void MainWindow::on_logButton_clicked() {
+    if (ui->textEdit->height() != 0) {
+        ui->textEdit->setFixedHeight(0);
+        ui->widget->setFixedHeight(widgetHeight - textEditHeight);
+        ui->clearButton->setVisible(false);
+        //ui->logButton->setIcon(QIcon());
+        ui->logButton->setIcon(QIcon("C:/Users/mikroe/Desktop/Ivane/ClickReader/App/down-arrow (4) - Copy.png"));
+    }
+    else {
+        ui->textEdit->setFixedHeight(textEditHeight);
+        ui->widget->setFixedHeight(widgetHeight);
+        ui->clearButton->setVisible(true);
+        //ui->logButton->setIcon(QIcon());
+        ui->logButton->setIcon(QIcon("C:/Users/mikroe/Desktop/Ivane/ClickReader/App/down-arrow (4).png"));
+    }
+
+
 
 }

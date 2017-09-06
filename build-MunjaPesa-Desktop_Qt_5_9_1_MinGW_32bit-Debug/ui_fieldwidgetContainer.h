@@ -32,6 +32,11 @@ public:
         if (FieldWidgetContainer->objectName().isEmpty())
             FieldWidgetContainer->setObjectName(QStringLiteral("FieldWidgetContainer"));
         FieldWidgetContainer->resize(411, 400);
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(FieldWidgetContainer->sizePolicy().hasHeightForWidth());
+        FieldWidgetContainer->setSizePolicy(sizePolicy);
         FieldWidgetContainer->setMinimumSize(QSize(411, 400));
         QPalette palette;
         QBrush brush(QColor(26, 26, 26, 255));

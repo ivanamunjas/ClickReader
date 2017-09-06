@@ -77,6 +77,10 @@
   <property name="windowTitle">
    <string>ClickReader</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../4-20ma-r-click-mikroe-1387.jpg</normaloff>../../../4-20ma-r-click-mikroe-1387.jpg</iconset>
+  </property>
   <property name="windowOpacity">
    <double>1.000000000000000</double>
   </property>
@@ -169,7 +173,7 @@
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_6"/>
       </item>
-      <item>
+      <item alignment="Qt::AlignHCenter">
        <widget class="QLabel" name="label">
         <property name="maximumSize">
          <size>
@@ -239,6 +243,12 @@
       </item>
       <item>
        <widget class="QWidget" name="widget_2" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <layout class="QVBoxLayout" name="verticalLayout_3">
          <property name="spacing">
           <number>0</number>
@@ -384,7 +394,7 @@ QComboBox::drop-down
 
 QComboBox::down-arrow
 {
-    image: url(C:/Users/mikroe/Downloads/down-arrow (4).png);
+    image: url(C:/Users/mikroe/Desktop/Ivane/ClickReader/App/down-arrow (4).png);
     width: 16px;
     height: 16px;
 }
@@ -462,7 +472,7 @@ QPushButton:hover {
              </property>
              <property name="icon">
               <iconset>
-               <normaloff>../../../../Downloads/refresh (1).png</normaloff>../../../../Downloads/refresh (1).png</iconset>
+               <normaloff>refresh (1).png</normaloff>refresh (1).png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -898,6 +908,7 @@ QScrollArea{
               <height>355</height>
              </rect>
             </property>
+            <zorder></zorder>
            </widget>
           </widget>
          </item>
@@ -925,6 +936,18 @@ QScrollArea{
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>141</height>
+         </size>
+        </property>
         <layout class="QVBoxLayout" name="verticalLayout_4">
          <property name="spacing">
           <number>0</number>
@@ -949,6 +972,158 @@ QScrollArea{
            <property name="bottomMargin">
             <number>6</number>
            </property>
+           <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+            <widget class="QPushButton" name="logButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>35</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>35</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="sizeIncrement">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Open Sans</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+   border: 2px #1a1a1a;
+
+   border-radius: 3px;
+    background-color:  #1a1a1a;
+
+	color: #e6e6e6;
+    
+
+
+
+}
+
+
+QPushButton:hover {
+   
+    background-color:#404040;
+
+	color: #e6e6e6;
+}
+</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_3">
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="palette">
+              <palette>
+               <active>
+                <colorrole role="WindowText">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>230</red>
+                   <green>230</green>
+                   <blue>230</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+                <colorrole role="Text">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>230</red>
+                   <green>230</green>
+                   <blue>230</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+               </active>
+               <inactive>
+                <colorrole role="WindowText">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>230</red>
+                   <green>230</green>
+                   <blue>230</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+                <colorrole role="Text">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>230</red>
+                   <green>230</green>
+                   <blue>230</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+               </inactive>
+               <disabled>
+                <colorrole role="WindowText">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>120</red>
+                   <green>120</green>
+                   <blue>120</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+                <colorrole role="Text">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>120</red>
+                   <green>120</green>
+                   <blue>120</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+               </disabled>
+              </palette>
+             </property>
+             <property name="font">
+              <font>
+               <family>Open Sans</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>  Log</string>
+             </property>
+            </widget>
+           </item>
            <item>
             <spacer name="horizontalSpacer">
              <property name="orientation">
@@ -1205,6 +1380,12 @@ QPushButton:hover {
              <height>0</height>
             </size>
            </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>109</height>
+            </size>
+           </property>
            <property name="palette">
             <palette>
              <active>
@@ -1333,6 +1514,7 @@ QTextEdit {
 
 background-color: #333333;
 border: 0px;
+padding-left: 5px;
 
 }</string>
            </property>

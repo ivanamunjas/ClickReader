@@ -48,6 +48,8 @@ public:
     QWidget *widget;
     QVBoxLayout *verticalLayout_4;
     QHBoxLayout *horizontalLayout_3;
+    QPushButton *logButton;
+    QLabel *label_3;
     QSpacerItem *horizontalSpacer;
     QPushButton *clearButton;
     QTextEdit *textEdit;
@@ -69,6 +71,9 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
         palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
         MainWindow->setPalette(palette);
+        QIcon icon;
+        icon.addFile(QStringLiteral("../../../4-20ma-r-click-mikroe-1387.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        MainWindow->setWindowIcon(icon);
         MainWindow->setWindowOpacity(1);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
@@ -124,10 +129,15 @@ public:
         label->setAlignment(Qt::AlignCenter);
         label->setWordWrap(false);
 
-        verticalLayout->addWidget(label);
+        verticalLayout->addWidget(label, 0, Qt::AlignHCenter);
 
         widget_2 = new QWidget(centralWidget);
         widget_2->setObjectName(QStringLiteral("widget_2"));
+        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Expanding);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(widget_2->sizePolicy().hasHeightForWidth());
+        widget_2->setSizePolicy(sizePolicy1);
         verticalLayout_3 = new QVBoxLayout(widget_2);
         verticalLayout_3->setSpacing(0);
         verticalLayout_3->setContentsMargins(11, 11, 11, 11);
@@ -250,7 +260,7 @@ public:
 "\n"
 "QComboBox::down-arrow\n"
 "{\n"
-"    image: url(C:/Users/mikroe/Downloads/down-arrow (4).png);\n"
+"    image: url(C:/Users/mikroe/Desktop/Ivane/ClickReader/App/down-arrow (4).png);\n"
 "    width: 16px;\n"
 "    height: 16px;\n"
 "}\n"
@@ -309,9 +319,9 @@ public:
 "}\n"
 "\n"
 ""));
-        QIcon icon;
-        icon.addFile(QStringLiteral("../../../../Downloads/refresh (1).png"), QSize(), QIcon::Normal, QIcon::Off);
-        refreshButton->setIcon(icon);
+        QIcon icon1;
+        icon1.addFile(QStringLiteral("refresh (1).png"), QSize(), QIcon::Normal, QIcon::Off);
+        refreshButton->setIcon(icon1);
         refreshButton->setIconSize(QSize(30, 30));
 
         horizontalLayout_2->addWidget(refreshButton);
@@ -377,11 +387,11 @@ public:
 
         scrollArea = new QScrollArea(widget_2);
         scrollArea->setObjectName(QStringLiteral("scrollArea"));
-        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Expanding);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(scrollArea->sizePolicy().hasHeightForWidth());
-        scrollArea->setSizePolicy(sizePolicy1);
+        QSizePolicy sizePolicy2(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(scrollArea->sizePolicy().hasHeightForWidth());
+        scrollArea->setSizePolicy(sizePolicy2);
         scrollArea->setMinimumSize(QSize(300, 355));
         QPalette palette4;
         palette4.setBrush(QPalette::Active, QPalette::WindowText, brush);
@@ -452,11 +462,13 @@ public:
         horizontalLayout->setContentsMargins(5, -1, 5, 5);
         widget = new QWidget(centralWidget);
         widget->setObjectName(QStringLiteral("widget"));
-        QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Preferred);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(widget->sizePolicy().hasHeightForWidth());
-        widget->setSizePolicy(sizePolicy2);
+        QSizePolicy sizePolicy3(QSizePolicy::Minimum, QSizePolicy::Preferred);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(widget->sizePolicy().hasHeightForWidth());
+        widget->setSizePolicy(sizePolicy3);
+        widget->setMinimumSize(QSize(0, 0));
+        widget->setMaximumSize(QSize(16777215, 141));
         verticalLayout_4 = new QVBoxLayout(widget);
         verticalLayout_4->setSpacing(0);
         verticalLayout_4->setContentsMargins(11, 11, 11, 11);
@@ -466,39 +478,88 @@ public:
         horizontalLayout_3->setSpacing(0);
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
         horizontalLayout_3->setContentsMargins(-1, -1, -1, 6);
+        logButton = new QPushButton(widget);
+        logButton->setObjectName(QStringLiteral("logButton"));
+        QSizePolicy sizePolicy4(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(logButton->sizePolicy().hasHeightForWidth());
+        logButton->setSizePolicy(sizePolicy4);
+        logButton->setMinimumSize(QSize(35, 25));
+        logButton->setMaximumSize(QSize(35, 16777215));
+        logButton->setSizeIncrement(QSize(0, 0));
+        logButton->setFont(font1);
+        logButton->setLayoutDirection(Qt::LeftToRight);
+        logButton->setStyleSheet(QLatin1String("QPushButton {\n"
+"   border: 2px #1a1a1a;\n"
+"\n"
+"   border-radius: 3px;\n"
+"    background-color:  #1a1a1a;\n"
+"\n"
+"	color: #e6e6e6;\n"
+"    \n"
+"\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"\n"
+"QPushButton:hover {\n"
+"   \n"
+"    background-color:#404040;\n"
+"\n"
+"	color: #e6e6e6;\n"
+"}\n"
+""));
+
+        horizontalLayout_3->addWidget(logButton, 0, Qt::AlignHCenter|Qt::AlignVCenter);
+
+        label_3 = new QLabel(widget);
+        label_3->setObjectName(QStringLiteral("label_3"));
+        label_3->setMinimumSize(QSize(50, 0));
+        label_3->setMaximumSize(QSize(16777215, 16777215));
+        QPalette palette5;
+        palette5.setBrush(QPalette::Active, QPalette::WindowText, brush5);
+        palette5.setBrush(QPalette::Active, QPalette::Text, brush5);
+        palette5.setBrush(QPalette::Inactive, QPalette::WindowText, brush5);
+        palette5.setBrush(QPalette::Inactive, QPalette::Text, brush5);
+        palette5.setBrush(QPalette::Disabled, QPalette::WindowText, brush4);
+        palette5.setBrush(QPalette::Disabled, QPalette::Text, brush4);
+        label_3->setPalette(palette5);
+        label_3->setFont(font1);
+
+        horizontalLayout_3->addWidget(label_3);
+
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_3->addItem(horizontalSpacer);
 
         clearButton = new QPushButton(widget);
         clearButton->setObjectName(QStringLiteral("clearButton"));
-        QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(clearButton->sizePolicy().hasHeightForWidth());
-        clearButton->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(clearButton->sizePolicy().hasHeightForWidth());
+        clearButton->setSizePolicy(sizePolicy4);
         clearButton->setMinimumSize(QSize(80, 25));
         clearButton->setMaximumSize(QSize(16777215, 16777215));
-        QPalette palette5;
-        palette5.setBrush(QPalette::Active, QPalette::WindowText, brush5);
-        palette5.setBrush(QPalette::Active, QPalette::Button, brush6);
-        palette5.setBrush(QPalette::Active, QPalette::Text, brush5);
-        palette5.setBrush(QPalette::Active, QPalette::ButtonText, brush5);
-        palette5.setBrush(QPalette::Active, QPalette::Base, brush6);
-        palette5.setBrush(QPalette::Active, QPalette::Window, brush6);
-        palette5.setBrush(QPalette::Inactive, QPalette::WindowText, brush5);
-        palette5.setBrush(QPalette::Inactive, QPalette::Button, brush6);
-        palette5.setBrush(QPalette::Inactive, QPalette::Text, brush5);
-        palette5.setBrush(QPalette::Inactive, QPalette::ButtonText, brush5);
-        palette5.setBrush(QPalette::Inactive, QPalette::Base, brush6);
-        palette5.setBrush(QPalette::Inactive, QPalette::Window, brush6);
-        palette5.setBrush(QPalette::Disabled, QPalette::WindowText, brush5);
-        palette5.setBrush(QPalette::Disabled, QPalette::Button, brush6);
-        palette5.setBrush(QPalette::Disabled, QPalette::Text, brush5);
-        palette5.setBrush(QPalette::Disabled, QPalette::ButtonText, brush5);
-        palette5.setBrush(QPalette::Disabled, QPalette::Base, brush6);
-        palette5.setBrush(QPalette::Disabled, QPalette::Window, brush6);
-        clearButton->setPalette(palette5);
+        QPalette palette6;
+        palette6.setBrush(QPalette::Active, QPalette::WindowText, brush5);
+        palette6.setBrush(QPalette::Active, QPalette::Button, brush6);
+        palette6.setBrush(QPalette::Active, QPalette::Text, brush5);
+        palette6.setBrush(QPalette::Active, QPalette::ButtonText, brush5);
+        palette6.setBrush(QPalette::Active, QPalette::Base, brush6);
+        palette6.setBrush(QPalette::Active, QPalette::Window, brush6);
+        palette6.setBrush(QPalette::Inactive, QPalette::WindowText, brush5);
+        palette6.setBrush(QPalette::Inactive, QPalette::Button, brush6);
+        palette6.setBrush(QPalette::Inactive, QPalette::Text, brush5);
+        palette6.setBrush(QPalette::Inactive, QPalette::ButtonText, brush5);
+        palette6.setBrush(QPalette::Inactive, QPalette::Base, brush6);
+        palette6.setBrush(QPalette::Inactive, QPalette::Window, brush6);
+        palette6.setBrush(QPalette::Disabled, QPalette::WindowText, brush5);
+        palette6.setBrush(QPalette::Disabled, QPalette::Button, brush6);
+        palette6.setBrush(QPalette::Disabled, QPalette::Text, brush5);
+        palette6.setBrush(QPalette::Disabled, QPalette::ButtonText, brush5);
+        palette6.setBrush(QPalette::Disabled, QPalette::Base, brush6);
+        palette6.setBrush(QPalette::Disabled, QPalette::Window, brush6);
+        clearButton->setPalette(palette6);
         clearButton->setFont(font2);
         clearButton->setStyleSheet(QLatin1String("QPushButton {\n"
 "   border: 2px #333333;\n"
@@ -528,23 +589,24 @@ public:
 
         textEdit = new QTextEdit(widget);
         textEdit->setObjectName(QStringLiteral("textEdit"));
-        QSizePolicy sizePolicy4(QSizePolicy::Minimum, QSizePolicy::Expanding);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(0);
-        sizePolicy4.setHeightForWidth(textEdit->sizePolicy().hasHeightForWidth());
-        textEdit->setSizePolicy(sizePolicy4);
+        QSizePolicy sizePolicy5(QSizePolicy::Minimum, QSizePolicy::Expanding);
+        sizePolicy5.setHorizontalStretch(0);
+        sizePolicy5.setVerticalStretch(0);
+        sizePolicy5.setHeightForWidth(textEdit->sizePolicy().hasHeightForWidth());
+        textEdit->setSizePolicy(sizePolicy5);
         textEdit->setMinimumSize(QSize(300, 0));
-        QPalette palette6;
-        palette6.setBrush(QPalette::Active, QPalette::Button, brush6);
-        palette6.setBrush(QPalette::Active, QPalette::Base, brush6);
-        palette6.setBrush(QPalette::Active, QPalette::Window, brush6);
-        palette6.setBrush(QPalette::Inactive, QPalette::Button, brush6);
-        palette6.setBrush(QPalette::Inactive, QPalette::Base, brush6);
-        palette6.setBrush(QPalette::Inactive, QPalette::Window, brush6);
-        palette6.setBrush(QPalette::Disabled, QPalette::Button, brush6);
-        palette6.setBrush(QPalette::Disabled, QPalette::Base, brush6);
-        palette6.setBrush(QPalette::Disabled, QPalette::Window, brush6);
-        textEdit->setPalette(palette6);
+        textEdit->setMaximumSize(QSize(16777215, 109));
+        QPalette palette7;
+        palette7.setBrush(QPalette::Active, QPalette::Button, brush6);
+        palette7.setBrush(QPalette::Active, QPalette::Base, brush6);
+        palette7.setBrush(QPalette::Active, QPalette::Window, brush6);
+        palette7.setBrush(QPalette::Inactive, QPalette::Button, brush6);
+        palette7.setBrush(QPalette::Inactive, QPalette::Base, brush6);
+        palette7.setBrush(QPalette::Inactive, QPalette::Window, brush6);
+        palette7.setBrush(QPalette::Disabled, QPalette::Button, brush6);
+        palette7.setBrush(QPalette::Disabled, QPalette::Base, brush6);
+        palette7.setBrush(QPalette::Disabled, QPalette::Window, brush6);
+        textEdit->setPalette(palette7);
         QFont font4;
         font4.setFamily(QStringLiteral("Open Sans"));
         font4.setPointSize(11);
@@ -579,6 +641,7 @@ public:
 "\n"
 "background-color: #333333;\n"
 "border: 0px;\n"
+"padding-left: 5px;\n"
 "\n"
 "}"));
 
@@ -604,6 +667,8 @@ public:
         label_2->setText(QString());
         refreshButton->setText(QString());
         pauseButton->setText(QApplication::translate("MainWindow", "Pause", Q_NULLPTR));
+        logButton->setText(QString());
+        label_3->setText(QApplication::translate("MainWindow", "  Log", Q_NULLPTR));
         clearButton->setText(QApplication::translate("MainWindow", "Clear", Q_NULLPTR));
     } // retranslateUi
 

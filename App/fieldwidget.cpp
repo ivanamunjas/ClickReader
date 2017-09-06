@@ -3,6 +3,7 @@
 #include "qcustomplot.h";
 #include <QtGlobal>
 #include <QPalette>
+#include <math.h>
 
 
 FieldWidget::FieldWidget(const QString &name, const QString &unit, QWidget *parent) :
@@ -33,11 +34,15 @@ FieldWidget::~FieldWidget() {
 }
 
 void FieldWidget::setValue(const QString &value) {
-    ui->valueLabel->setText(value);
+    float n = roundf(value.toFloat() * 100) / 100;
+    ui->valueLabel->setText(QString::number(n));
 }
 
 void FieldWidget::updatePlot(const QString &value) {
-    float n  = static_cast<float>(static_cast<int>(value.toFloat()*100+0.5))/100.0;
+   // float n  = static_cast<float>(static_cast<int>(value.toFloat()*100+0.5))/100.0;
+
+    float n = roundf(value.toFloat() * 100) / 100;
+
     yMin = qMin(yMin, n);
     yMax = qMax(yMax, n);
     if (x==0)
