@@ -32,9 +32,6 @@ private slots:
 
     void on_combo_currentIndexChanged(int index);
 
-
-    void on_refreshButton_clicked();
-
 private:
     Ui::MainWindow *ui;
     QSerialPort* serial;

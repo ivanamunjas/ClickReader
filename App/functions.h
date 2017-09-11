@@ -30,7 +30,6 @@ public:
     void setTitle(QLabel** title);
     void log(QByteArray arr, QString title);
     void clearLog();
-
 };
 
 

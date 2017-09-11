@@ -57,3 +57,4 @@ void FieldWidget::updatePlot(const QString &value) {
     x += 1;
 
 }
+

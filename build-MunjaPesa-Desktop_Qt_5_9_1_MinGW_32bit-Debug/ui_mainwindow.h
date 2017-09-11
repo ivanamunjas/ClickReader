@@ -40,7 +40,6 @@ public:
     QHBoxLayout *horizontalLayout_2;
     PortComboBox *combo;
     QLabel *label_2;
-    QPushButton *refreshButton;
     QPushButton *pauseButton;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
@@ -293,38 +292,6 @@ public:
         label_2->setObjectName(QStringLiteral("label_2"));
 
         horizontalLayout_2->addWidget(label_2);
-
-        refreshButton = new QPushButton(widget_2);
-        refreshButton->setObjectName(QStringLiteral("refreshButton"));
-        refreshButton->setMinimumSize(QSize(40, 0));
-        refreshButton->setMaximumSize(QSize(40, 25));
-        refreshButton->setStyleSheet(QLatin1String("QPushButton {\n"
-"   border: 2px #333333;\n"
-"\n"
-"   border-radius: 3px;\n"
-"    background-color:  #333333;\n"
-"    min-width:40px;\n"
-"	color: #e6e6e6;\n"
-"\n"
-"\n"
-"}\n"
-"\n"
-"\n"
-"QPushButton:hover {\n"
-"   \n"
-"    background-color:#404040;\n"
-"                                     \n"
-"    min-width: 80px;\n"
-"	color: #e6e6e6;\n"
-"}\n"
-"\n"
-""));
-        QIcon icon1;
-        icon1.addFile(QStringLiteral("refresh (1).png"), QSize(), QIcon::Normal, QIcon::Off);
-        refreshButton->setIcon(icon1);
-        refreshButton->setIconSize(QSize(30, 30));
-
-        horizontalLayout_2->addWidget(refreshButton);
 
         pauseButton = new QPushButton(widget_2);
         pauseButton->setObjectName(QStringLiteral("pauseButton"));
@@ -665,7 +632,6 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "ClickReader", Q_NULLPTR));
         label->setText(QApplication::translate("MainWindow", "<html><head/><body><p>CLICK READER</p></body></html>", Q_NULLPTR));
         label_2->setText(QString());
-        refreshButton->setText(QString());
         pauseButton->setText(QApplication::translate("MainWindow", "Pause", Q_NULLPTR));
         logButton->setText(QString());
         label_3->setText(QApplication::translate("MainWindow", "  Log", Q_NULLPTR));

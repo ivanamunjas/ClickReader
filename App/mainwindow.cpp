@@ -12,11 +12,8 @@
 #include <QSerialPortInfo>
 #include <QStringList>
 #include <QPixmap>
-#include <QBitmap>
 #include <QColor>
-#include <QTextBlock>
 #include <QSerialPort>
-
 #include "fieldwidget.h"
 #include "fieldwidgetContainer.h"
 
@@ -52,7 +49,6 @@ MainWindow::MainWindow(QWidget *parent) :
     widgetHeight = ui->widget->maximumHeight();
     textEditHeight = ui->textEdit->maximumHeight();
     ui->logButton->setIcon(QIcon("C:/Users/mikroe/Desktop/Ivane/ClickReader/App/down-arrow (4).png"));
-    ui->refreshButton->setIcon(QIcon("C:/Users/mikroe/Desktop/Ivane/ClickReader/App/refresh (1).png"));
 }
 
 
@@ -114,21 +110,6 @@ void MainWindow::on_combo_currentIndexChanged(int index) {
 
 }
 
-
-
-void MainWindow::on_refreshButton_clicked() {
-    if (serial->isOpen())
-        serial->close();
-
-    serial->setPortName((ui->combo)->currentText());
-
-    if (!serial->open(QIODevice::ReadOnly))  {
-        qDebug() << "Can't open serial port.";
-        qDebug() << serial->errorString();
-        serial->close();
-    }
-
-}
 
 void MainWindow::on_logButton_clicked() {
     if (ui->textEdit->height() != 0) {

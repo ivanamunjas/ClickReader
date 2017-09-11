@@ -160,4 +160,3 @@ void Func::log(QByteArray arr, QString title){
 void Func::clearLog() {
     txt->clear();
 }
-

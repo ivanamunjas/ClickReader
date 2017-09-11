@@ -431,58 +431,6 @@ border-radius: 3px;
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="refreshButton">
-             <property name="minimumSize">
-              <size>
-               <width>40</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>40</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
-   border: 2px #333333;
-
-   border-radius: 3px;
-    background-color:  #333333;
-    min-width:40px;
-	color: #e6e6e6;
-
-
-}
-
-
-QPushButton:hover {
-   
-    background-color:#404040;
-                                     
-    min-width: 80px;
-	color: #e6e6e6;
-}
-
-</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="icon">
-              <iconset>
-               <normaloff>refresh (1).png</normaloff>refresh (1).png</iconset>
-             </property>
-             <property name="iconSize">
-              <size>
-               <width>30</width>
-               <height>30</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-           <item>
             <widget class="QPushButton" name="pauseButton">
              <property name="maximumSize">
               <size>
@@ -908,7 +856,6 @@ QScrollArea{
               <height>355</height>
              </rect>
             </property>
-            <zorder></zorder>
            </widget>
           </widget>
          </item>
