@@ -49,5 +49,4 @@ FORMS += \
     fieldwidgetContainer.ui
 
 DISTFILES += \
-    buttonDesign.qml \
     style.qss

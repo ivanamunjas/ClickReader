@@ -44,7 +44,6 @@ private:
     QStringList ports;
     QPixmap pix;
     int widgetHeight, textEditHeight;
-   // PortComboBox* combo;
 };
 
 #endif // MAINWINDOW_H

@@ -135,14 +135,12 @@ void MainWindow::on_logButton_clicked() {
         ui->textEdit->setFixedHeight(0);
         ui->widget->setFixedHeight(widgetHeight - textEditHeight);
         ui->clearButton->setVisible(false);
-        //ui->logButton->setIcon(QIcon());
         ui->logButton->setIcon(QIcon("C:/Users/mikroe/Desktop/Ivane/ClickReader/App/down-arrow (4) - Copy.png"));
     }
     else {
         ui->textEdit->setFixedHeight(textEditHeight);
         ui->widget->setFixedHeight(widgetHeight);
         ui->clearButton->setVisible(true);
-        //ui->logButton->setIcon(QIcon());
         ui->logButton->setIcon(QIcon("C:/Users/mikroe/Desktop/Ivane/ClickReader/App/down-arrow (4).png"));
     }
 

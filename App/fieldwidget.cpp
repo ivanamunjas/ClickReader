@@ -14,17 +14,19 @@ FieldWidget::FieldWidget(const QString &name, const QString &unit, QWidget *pare
     ui->unitLabel->setText(unit+"   ");
     ui->plotWidget->addGraph();
     ui->plotWidget->graph(0)->setPen(QPen(QColor(121,210,121)));
-  //  ui->plotWidget->graph(0)->setLineStyle(QCPGraph::lsLine);
+
     ui->plotWidget->setBackground(QColor(51,51,51));
     ui->plotWidget->xAxis->grid()->setVisible(false);
     ui->plotWidget->yAxis->grid()->setPen(QPen(QColor(102, 102, 102)));
+
     ui->plotWidget->yAxis->setBasePen(QPen(QColor(102, 102, 102)));
     ui->plotWidget->xAxis->setBasePen(QPen(QColor(102, 102, 102)));
-      //ui->plotWidget->yAxis->setTickPen(true);
+
     ui->plotWidget->xAxis->setTickLabelColor(QColor(230, 230, 230));
     ui->plotWidget->yAxis->setTickLabelColor(QColor(230, 230, 230));
+
     ui->plotWidget->xAxis->setSubTickPen(QPen(QColor(102, 102, 102)));
-     ui->plotWidget->xAxis->setTickPen(QPen(QColor(102, 102, 102)));
+    ui->plotWidget->xAxis->setTickPen(QPen(QColor(102, 102, 102)));
     ui->plotWidget->yAxis->setSubTickPen(QPen(QColor(102, 102, 102)));
     ui->plotWidget->yAxis->setTickPen(QPen(QColor(102, 102, 102)));
 }
@@ -39,7 +41,6 @@ void FieldWidget::setValue(const QString &value) {
 }
 
 void FieldWidget::updatePlot(const QString &value) {
-   // float n  = static_cast<float>(static_cast<int>(value.toFloat()*100+0.5))/100.0;
 
     float n = roundf(value.toFloat() * 100) / 100;
 

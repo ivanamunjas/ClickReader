@@ -69,8 +69,7 @@ OBJECTS       = debug/main.o \
 		debug/moc_portcombobox.o \
 		debug/moc_qcustomplot.o
 
-DIST          = buttonDesign.qml \
-		style.qss ..\App\mainwindow.h \
+DIST          = style.qss ..\App\mainwindow.h \
 		..\App\functions.h \
 		..\App\fieldwidget.h \
 		..\App\fieldwidget.h \
@@ -2860,6 +2859,7 @@ debug/fieldwidget.o: ../App/fieldwidget.cpp ../App/fieldwidget.h \
 		C:/Qt5.9/5.9.1/mingw53_32/include/QtWidgets/qrubberband.h \
 		C:/Qt5.9/5.9.1/mingw53_32/include/QtWidgets/QLabel \
 		C:/Qt5.9/5.9.1/mingw53_32/include/QtWidgets/qlabel.h \
+		C:/Qt5.9/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
 		../App/qcustomplot.h \
 		C:/Qt5.9/5.9.1/mingw53_32/include/QtCore/QObject \
 		C:/Qt5.9/5.9.1/mingw53_32/include/QtCore/QPointer \
@@ -3217,7 +3217,9 @@ debug/fieldwidget.o: ../App/fieldwidget.cpp ../App/fieldwidget.h \
 		C:/Qt5.9/5.9.1/mingw53_32/include/QtCore/QPair \
 		C:/Qt5.9/5.9.1/mingw53_32/include/QtPrintSupport/qprintpreviewdialog.h \
 		C:/Qt5.9/5.9.1/mingw53_32/include/QtPrintSupport/qprintpreviewwidget.h \
-		C:/Qt5.9/5.9.1/mingw53_32/include/QtPrintSupport/qtprintsupportversion.h
+		C:/Qt5.9/5.9.1/mingw53_32/include/QtPrintSupport/qtprintsupportversion.h \
+		C:/Qt5.9/5.9.1/mingw53_32/include/QtCore/QtGlobal \
+		C:/Qt5.9/5.9.1/mingw53_32/include/QtGui/QPalette
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\fieldwidget.o ..\App\fieldwidget.cpp
 
 debug/fieldwidgetContainer.o: ../App/fieldwidgetContainer.cpp ../App/fieldwidgetContainer.h \

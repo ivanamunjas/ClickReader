@@ -5,27 +5,22 @@
 
 FieldWidgetContainer::FieldWidgetContainer(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::FieldWidgetContainer)
-{
+    ui(new Ui::FieldWidgetContainer) {
     ui->setupUi(this);
     ui->containerLayout->setSpacing(1);
 }
 
-FieldWidgetContainer::~FieldWidgetContainer()
-{
+FieldWidgetContainer::~FieldWidgetContainer() {
     delete ui;
 }
 
-void FieldWidgetContainer::addField(FieldWidget** fw, const QColor &color)
-{
+void FieldWidgetContainer::addField(FieldWidget** fw, const QColor &color) {
     ui->containerLayout->addWidget(*fw);
 }
 
-void FieldWidgetContainer::clearFields()
-{
+void FieldWidgetContainer::clearFields() {
     QList<QWidget *> widgets = findChildren<QWidget*>();
-    for (auto widget: widgets)
-    {
+    for (auto widget: widgets) {
         widget->deleteLater();
     }
 }

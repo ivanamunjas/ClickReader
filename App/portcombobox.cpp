@@ -8,8 +8,7 @@ PortComboBox::PortComboBox(QWidget *parent) :  QComboBox(parent) {
 
 }
 
-PortComboBox::~PortComboBox()
-{
+PortComboBox::~PortComboBox() {
 
 }
 void PortComboBox::showPopup(){

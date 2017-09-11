@@ -17,7 +17,7 @@ private:
     QMap<QString, FieldWidget*> fieldMap;
     FieldWidgetContainer* cont;
     QTextEdit* txt;
-    QLabel* title; //ovo
+    QLabel* title;
 
 public:
     int msgEnd(QByteArray buff);
@@ -27,7 +27,7 @@ public:
     void reg(QByteArray arr);
     void setContainer(FieldWidgetContainer** cont);
     void setTextEdit(QTextEdit** txt);
-    void setTitle(QLabel** title); //ovo
+    void setTitle(QLabel** title);
     void log(QByteArray arr, QString title);
     void clearLog();
 
