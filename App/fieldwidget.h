@@ -18,7 +18,6 @@ public:
 
     ~FieldWidget();
 
-    //Sets the updated value of a fieldwidget.
     void setValue(const QString &value);
 
     void updatePlot(const QString &value);

@@ -2,6 +2,22 @@
 #
 # Project created by QtCreator 2017-08-17T15:25:05
 #
+#                   ClickReader
+#
+# This app displays names, values and units of the
+# signals that are recieved from a development
+# board. Their read values are being sent from
+# mikroC via UART. The user has to use MED_library
+# in mikroC to perform registration and choose
+# an interval for sending updated values.
+# When the right COM is selected, the app will make
+# the right number of fields and allow the user to
+# track changes of measured signals.
+#
+#-------------------------------------------------
+#
+#       Authors: Ivana Munjas & Ivana Pesic
+#
 #-------------------------------------------------
 
 QT       += core gui serialport printsupport
@@ -50,3 +66,6 @@ FORMS += \
 
 DISTFILES += \
     style.qss
+
+RESOURCES += \
+    icons.qrc

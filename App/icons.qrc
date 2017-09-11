@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>down-arrow (4) - Copy.png</file>
+        <file>down-arrow (4).png</file>
+    </qresource>
+</RCC>

@@ -104,8 +104,8 @@ void Func::reg(QByteArray arr){
 void Func::init(){
 
     for (auto e : fieldMap.toStdMap()){
-        e.second=nullptr;
         delete e.second;
+        e.second=nullptr;
     }
 
     fieldMap.clear();
@@ -159,4 +159,11 @@ void Func::log(QByteArray arr, QString title){
 
 void Func::clearLog() {
     txt->clear();
+}
+
+
+Func::~Func(){
+    delete cont; cont = nullptr;
+    delete txt; txt = nullptr;
+    delete title; title = nullptr;
 }

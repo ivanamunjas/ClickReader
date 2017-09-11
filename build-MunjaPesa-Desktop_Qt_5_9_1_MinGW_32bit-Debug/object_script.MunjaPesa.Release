@@ -6,6 +6,7 @@ INPUT(
 ./release\fieldwidgetContainer.o
 ./release\portcombobox.o
 ./release\qcustomplot.o
+./release\qrc_icons.o
 ./release\moc_mainwindow.o
 ./release\moc_fieldwidget.o
 ./release\moc_fieldwidgetContainer.o

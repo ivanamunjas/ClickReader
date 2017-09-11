@@ -15,17 +15,8 @@ public:
     explicit FieldWidgetContainer(QWidget *parent = 0);
     ~FieldWidgetContainer();
 
-    /*!
-     * \brief Adds field to container.
-     * \param name Field name.
-     * \param unit Unit.
-     * \param color Color.
-     */
     void addField(FieldWidget** fw, const QColor &color);
 
-    /*!
-     * \brief Clears all fields in container.
-     */
     void clearFields();
 
 private:

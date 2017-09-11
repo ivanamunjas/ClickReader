@@ -22,6 +22,9 @@ public:
     ~MainWindow();
 
 private slots:
+    /*!
+     * \brief Reads recieved string data and checks if the whole message is recieved.
+     */
     void readData();
 
     void on_pauseButton_clicked();
