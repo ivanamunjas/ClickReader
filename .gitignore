@@ -3,6 +3,4 @@ App/mainwindow.cpp.autosave
 *.autosave
 *.user
 *.o
-*.o
-*.o
-*.o
+*.debug
